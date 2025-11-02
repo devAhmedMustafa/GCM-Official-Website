@@ -1,12 +1,20 @@
 <script>
-	import '../app.css';
-	import favicon from '$lib/assets/favicon.svg';
-	
-	let { children } = $props();
+  import Navbar from '$lib/components/layout/Navbar.svelte';
+  import '../app.css';
+  
+  let { children } = $props();
 </script>
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-</svelte:head>
+<Navbar />
 
-{@render children()}
+<main>
+  {@render children()}
+</main>
+
+<style>
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+</style>
