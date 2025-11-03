@@ -1,41 +1,59 @@
 <script>
-  // Any imports or logic can go here
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    const points = document.querySelectorAll(".difference-point");
+    // Animate in when they scroll into view (adds "visible" gradually)
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    points.forEach((point) => observer.observe(point));
+  });
 </script>
 
 <section id="difference" class="difference-section">
   <div class="container">
-    <h2>Closer Than Dubai. Better Than a Spa.</h2>
-    
+    <h2 class="title">
+      Closer Than Dubai. <span>Better Than a Spa.</span>
+    </h2>
+
     <div class="difference-container">
       <div class="difference-point">
         <div class="icon">👨‍⚕️</div>
         <div class="content">
           <h3>Surgeon-led care</h3>
-          <p>medical credibility you can trust.</p>
+          <p>Medical expertise guided by specialists, not trends.</p>
         </div>
       </div>
-      
+
       <div class="difference-point">
         <div class="icon">🧬</div>
         <div class="content">
           <h3>Evidence-based programs</h3>
-          <p>science over trends.</p>
+          <p>Science that shapes real outcomes — not passing fads.</p>
         </div>
       </div>
-      
+
       <div class="difference-point">
         <div class="icon">🏝️</div>
         <div class="content">
-          <h3>Integrated with luxury resorts</h3>
-          <p>health meets hospitality.</p>
+          <h3>Luxury resort integration</h3>
+          <p>Wellness experiences in serene, world-class environments.</p>
         </div>
       </div>
-      
+
       <div class="difference-point">
         <div class="icon">🇦🇪</div>
         <div class="content">
           <h3>Serving the Northern Emirates</h3>
-          <p>world-class care, close to home.</p>
+          <p>Exceptional care, closer to home — without the travel hassle.</p>
         </div>
       </div>
     </div>
@@ -45,81 +63,79 @@
 <style>
   .difference-section {
     width: 100%;
-    padding: 5rem 5%;
-    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 6rem 5%;
+    overflow: hidden;
   }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
+
+  .title {
+    font-size: 2.6rem;
+    color: #300808;
+    margin-bottom: 3.5rem;
+    font-weight: 700;
     text-align: center;
   }
-  
-  h2 {
-    font-size: 2.5rem;
-    color: #400a0a;
-    margin-bottom: 3rem;
-    font-weight: 700;
+
+  .title span {
+    color: #cc0000;
   }
-  
+
   .difference-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
-    max-width: 900px;
+    columns: 2; 
+    gap: 2rem;
     margin: 0 auto;
   }
-  
+
   .difference-point {
     display: flex;
-    align-items: center;
-    text-align: left;
-    padding: 1.5rem;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: flex-start;
+    background: white;
+    border-radius: 16px;
+    padding: 1.8rem;
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
   }
-  
+
   .difference-point:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+    transform: translateY(-6px) scale(1.02);
   }
-  
+
   .icon {
-    font-size: 2.5rem;
-    margin-right: 1.5rem;
+    font-size: 2.8rem;
+    margin-right: 1.2rem;
+    flex-shrink: 0;
+    transition: transform 0.4s ease;
   }
-  
+
+  .difference-point:hover .icon {
+    transform: rotate(-10deg) scale(1.1);
+  }
+
   .content h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #cc0000;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
     font-weight: 600;
   }
-  
+
   .content p {
-    font-size: 0.9rem;
-    color: #4a5568;
-    line-height: 1.4;
+    font-size: 0.95rem;
+    color: #4a4a4a;
+    line-height: 1.5;
   }
-  
+
   @media (max-width: 768px) {
-    .difference-container {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-    
-    h2 {
+    .title {
       font-size: 2rem;
     }
-    
-    .difference-point {
-      padding: 1.2rem;
+
+    .difference-section {
+      padding: 4rem 6%;
     }
-    
+
     .icon {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-right: 1rem;
     }
   }
