@@ -16,11 +16,6 @@
     <div class="text-content">
       <h1>Redefining Health. Extending Life.</h1>
       <p>The first dedicated longevity and preventive medicine center in the Northern Emirates — where medical excellence meets luxury wellness.</p>
-      
-      <div class="cta-buttons">
-        <button class="cta primary">Book a Consultation</button>
-        <button class="cta secondary">Explore Memberships</button>
-      </div>
     </div>
     
     <div class="visual-content">
@@ -86,41 +81,6 @@
     line-height: 1.6;
     margin-bottom: 2rem;
     color: #4a5568;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-
-  .cta {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .primary {
-    background-color: #cc0000;
-    color: white;
-    border: none;
-  }
-
-  .primary:hover {
-    background-color: #aa0000;
-  }
-
-  .secondary {
-    background-color: transparent;
-    color: #cc0000;
-    border: 2px solid #cc0000;
-  }
-
-  .secondary:hover {
-    background-color: rgba(204, 0, 0, 0.1);
   }
 
   .video-container, .image-placeholder, .video-placeholder {

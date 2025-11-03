@@ -33,9 +33,6 @@
       </ul>
     </nav>
     
-    <div class="cta-button">
-      <button>Book Consultation</button>
-    </div>
   </div>
 </header>
 
@@ -98,23 +95,9 @@
     color: #cc0000;
   }
 
-  .cta-button button {
-    background-color: rgb(204, 0, 0);
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-  }
-
-  .cta-button button:hover {
-    background-color: #aa0000;
-  }
-
   /* Responsive styles */
   @media (max-width: 768px) {
-    .nav-links, .cta-button {
+    .nav-links {
       display: none; /* Will be replaced with mobile menu toggle */
     }
   }
