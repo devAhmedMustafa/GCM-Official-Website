@@ -69,7 +69,7 @@
   }
 
   .logo-text {
-    color: #400a0a;
+    color: var(--text-color);
     font-weight: 700;
     font-size: 1.5rem;
   }
@@ -85,14 +85,14 @@
   }
 
   .nav-links a {
-    color: #400a0a;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
   }
 
   .nav-links a:hover {
-    color: #cc0000;
+    color: var(--primary-color);
   }
 
   /* Responsive styles */

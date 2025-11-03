@@ -37,7 +37,7 @@
     width: 100%;
     height: 100vh;
     min-height: 600px;
-    background: linear-gradient(to right, #f5f9ff, #e6f0ff);
+    background: linear-gradient(to right, #f3f3f3, #c7c7c7);
     display: flex;
     align-items: center;
     padding: 0 5%;
@@ -72,7 +72,7 @@
     font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    color: #400a0a;
+    color: var(--text-color);
     font-weight: 700;
   }
 
@@ -80,14 +80,14 @@
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 2rem;
-    color: #4a5568;
+    color: var(--text-muted-color);
   }
 
   .video-container, .image-placeholder, .video-placeholder {
     width: 100%;
     height: 400px;
     border-radius: 10px;
-    background-color: #f0e2e2;
+    background-color: #c4c4c4;
     overflow: hidden;
   }
 
