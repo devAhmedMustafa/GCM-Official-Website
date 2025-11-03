@@ -1,17 +1,17 @@
 <script>
-  // Import any assets or components needed
   import { onMount } from 'svelte';
+  import HeartScene from '../heart_scene/HeartScene.svelte';
 
-  // Reactive declarations
   let showVideo = true;
 
-  // Lifecycle
   onMount(() => {
-    // Any initialization code
   });
 </script>
 
 <section class="hero">
+
+  <HeartScene />
+
   <div class="hero-content">
     <div class="text-content">
       <h1>Redefining Health. Extending Life.</h1>
@@ -37,7 +37,6 @@
     width: 100%;
     height: 100vh;
     min-height: 600px;
-    background: linear-gradient(to right, #f3f3f3, #c7c7c7);
     display: flex;
     align-items: center;
     padding: 0 5%;
@@ -85,9 +84,10 @@
 
   .video-container, .image-placeholder, .video-placeholder {
     width: 100%;
-    height: 400px;
+    height: 500px;
     border-radius: 10px;
-    background-color: #c4c4c4;
+    background-color: #ffffff33;
+    backdrop-filter: blur(5px);
     overflow: hidden;
   }
 

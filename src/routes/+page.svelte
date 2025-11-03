@@ -1,10 +1,11 @@
 <script>
   import Hero from '$lib/components/home/Hero.svelte';
+  import OurVision from '$lib/components/vision_section/OurVision.svelte';
 </script>
 
 <main>
   <Hero />
-  <!-- Other sections will be added here later -->
+  <OurVision />
 </main>
 
 <style>
