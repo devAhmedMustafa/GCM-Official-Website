@@ -6,6 +6,7 @@
   import TheDifference from '$lib/components/home/TheDifference.svelte';
   import Testimonials from '$lib/components/home/Testimonials.svelte';
   import JoinSection from '$lib/components/home/JoinSection.svelte';
+  import OurVision from '$lib/components/vision_section/OurVision.svelte';
 </script>
 
 <main>

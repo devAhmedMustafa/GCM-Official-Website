@@ -1,26 +1,21 @@
 <script>
-  // Import any assets or components needed
   import { onMount } from 'svelte';
+  import HeartScene from '../heart_scene/HeartScene.svelte';
 
-  // Reactive declarations
   let showVideo = true;
 
-  // Lifecycle
   onMount(() => {
-    // Any initialization code
   });
 </script>
 
 <section class="hero">
+
+  <HeartScene />
+
   <div class="hero-content">
     <div class="text-content">
       <h1>Redefining Health. Extending Life.</h1>
       <p>The first dedicated longevity and preventive medicine center in the Northern Emirates — where medical excellence meets luxury wellness.</p>
-      
-      <div class="cta-buttons">
-        <button class="cta primary">Book a Consultation</button>
-        <button class="cta secondary">Explore Memberships</button>
-      </div>
     </div>
     
     <div class="visual-content">
@@ -42,7 +37,6 @@
     width: 100%;
     height: 100vh;
     min-height: 600px;
-    background: linear-gradient(to right, #f5f9ff, #e6f0ff);
     display: flex;
     align-items: center;
     padding: 0 5%;
@@ -77,7 +71,7 @@
     font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    color: #400a0a;
+    color: var(--text-color);
     font-weight: 700;
   }
 
@@ -85,49 +79,15 @@
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 2rem;
-    color: #4a5568;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-
-  .cta {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .primary {
-    background-color: #cc0000;
-    color: white;
-    border: none;
-  }
-
-  .primary:hover {
-    background-color: #aa0000;
-  }
-
-  .secondary {
-    background-color: transparent;
-    color: #cc0000;
-    border: 2px solid #cc0000;
-  }
-
-  .secondary:hover {
-    background-color: rgba(204, 0, 0, 0.1);
+    color: var(--text-muted-color);
   }
 
   .video-container, .image-placeholder, .video-placeholder {
     width: 100%;
-    height: 400px;
+    height: 500px;
     border-radius: 10px;
-    background-color: #f0e2e2;
+    background-color: #ffffff33;
+    backdrop-filter: blur(5px);
     overflow: hidden;
   }
 
