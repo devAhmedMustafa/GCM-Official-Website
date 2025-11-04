@@ -4,6 +4,7 @@
   import WhyItMatters from '$lib/components/home/WhyItMatters.svelte';
   import WhatWeOffer from '$lib/components/home/WhatWeOffer.svelte';
   import TheDifference from '$lib/components/home/TheDifference.svelte';
+  import Founders from '$lib/components/home/Founders.svelte';
   import Testimonials from '$lib/components/home/Testimonials.svelte';
   import JoinSection from '$lib/components/home/JoinSection.svelte';
 </script>
@@ -14,6 +15,7 @@
   <WhyItMatters />
   <WhatWeOffer />
   <TheDifference />
+  <Founders />
   <Testimonials />
   <JoinSection />
 </main>

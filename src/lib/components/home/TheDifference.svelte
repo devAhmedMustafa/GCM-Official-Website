@@ -79,7 +79,6 @@
 <style>
   .difference-section {
     width: 100%;
-    min-height: 100vh;
     padding: 6rem 5%;
     overflow: hidden;
     position: relative;
