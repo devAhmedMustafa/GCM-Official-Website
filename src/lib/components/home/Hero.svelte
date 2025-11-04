@@ -1,6 +1,5 @@
 <script>
   import { onMount } from 'svelte';
-  import HeartScene from '../heart_scene/HeartScene.svelte';
     import SineWaves from '../vfx/SineWaves.svelte';
 
   let showVideo = true;
