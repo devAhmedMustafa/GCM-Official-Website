@@ -6,7 +6,7 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-logo">
-        <span class="logo-text">Consolidated Medical</span>
+        <span class="logo-text">Bayt Al-Ihyaa</span>
         <p class="tagline">Where Science Meets Wellness.</p>
       </div>
       
@@ -34,7 +34,7 @@
     </div>
     
     <div class="footer-bottom">
-      <p>&copy; {new Date().getFullYear()} Consolidated Medical. All rights reserved.</p>
+      <p>&copy; {new Date().getFullYear()} Bayt Al-Ihyaa. All rights reserved.</p>
     </div>
   </div>
 </footer>

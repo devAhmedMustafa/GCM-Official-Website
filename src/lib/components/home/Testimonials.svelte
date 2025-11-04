@@ -1,5 +1,5 @@
 <script>
-  // Any imports or logic can go here
+  import CountUp from '$lib/components/common/CountUp.svelte';
 </script>
 
 <section id="testimonials" class="testimonials-section">
@@ -14,15 +14,15 @@
       <!-- Placeholder for future testimonial quotes or client logos -->
       <div class="testimonial-metrics">
         <div class="metric">
-          <div class="metric-value">5,000+</div>
+          <div class="metric-value"><CountUp target={5000} suffix="+" /></div>
           <div class="metric-label">Clients Served</div>
         </div>
         <div class="metric">
-          <div class="metric-value">98%</div>
+          <div class="metric-value"><CountUp target={98} suffix="%" /></div>
           <div class="metric-label">Client Satisfaction</div>
         </div>
         <div class="metric">
-          <div class="metric-value">100%</div>
+          <div class="metric-value"><CountUp target={100} suffix="%" /></div>
           <div class="metric-label">Science-Backed</div>
         </div>
       </div>

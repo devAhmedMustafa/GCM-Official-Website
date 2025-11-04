@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import HeartScene from '../heart_scene/HeartScene.svelte';
+    import SineWaves from '../vfx/SineWaves.svelte';
 
   let showVideo = true;
 
@@ -10,7 +11,11 @@
 
 <section class="hero">
 
-  <HeartScene />
+  <!-- <HeartScene /> -->
+
+  <img src="/Logo.png" alt="" class="logo-image" />
+
+  <SineWaves />
 
   <div class="hero-content">
     <div class="text-content">
@@ -42,6 +47,15 @@
     padding: 0 5%;
     overflow: hidden;
     position: relative;
+  }
+
+  .logo-image {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    width: 70px;
+    height: auto;
+    z-index: 10;
   }
 
   .hero-content {
@@ -86,20 +100,27 @@
     width: 100%;
     height: 500px;
     border-radius: 10px;
-    background-color: #ffffff33;
-    backdrop-filter: blur(5px);
+    /* background-color: #ffffff33; */
+    /* backdrop-filter: blur(5px); */
     overflow: hidden;
   }
 
   /* Responsive styles */
   @media (max-width: 768px) {
     .hero-content {
-      flex-direction: column;
-      gap: 2rem;
+      width: 100%;
+    }
+
+    .logo-image {
+      top: 20px;
+      left: 20px;
+      width: 50px;
     }
 
     .text-content {
       padding-right: 0;
+      flex: none;
+      width: 100%;
     }
 
     h1 {

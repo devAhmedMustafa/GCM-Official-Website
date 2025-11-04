@@ -10,16 +10,30 @@
       offset: 120,
       easing: "ease-out-cubic",
     });
+
+    const section = document.getElementById("offerings");
+    const image = document.querySelector(".resort-img");
+
+    window.addEventListener("scroll", () => {
+      const scrollPosition = window.scrollY;
+      const min = Math.min(scrollPosition, section.offsetTop);
+
+      const transformY = section.offsetTop - min;
+      image.style.transform = `translateY(${transformY}px)`;
+    });
+
   });
 </script>
 
 <section id="offerings" class="offerings-section">
   <div class="container">
+
+    <img src="/Resort3.png" class="resort-img" alt="">
+
     <h2 data-aos="fade-up">Tailored Health. Proven Science.</h2>
     
     <div class="offerings-container">
       <div class="offering-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="offering-number">1️⃣</div>
         <h3>Membership Programs</h3>
         <p>
           Annual personalized health memberships (AED 15,000–25,000) — diagnostics, genetic screening, and lifestyle optimization with continuous physician care.
@@ -27,7 +41,6 @@
       </div>
       
       <div class="offering-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="offering-number">2️⃣</div>
         <h3>Longevity Retreats</h3>
         <p>
           2–5 day medical wellness retreats in partnership with luxury resorts — merging clinical precision with ultimate relaxation.
@@ -35,7 +48,6 @@
       </div>
       
       <div class="offering-card" data-aos="fade-up" data-aos-delay="300">
-        <div class="offering-number">3️⃣</div>
         <h3>Corporate Wellness</h3>
         <p>
           Executive wellness programs for leaders who value long-term vitality, performance, and productivity.
@@ -50,6 +62,7 @@
     width: 100%;
     min-height: 100vh;
     padding: 8rem 5%;
+    position: relative;
   }
   
   .container {
@@ -88,16 +101,6 @@
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
   }
-  
-  .offering-number {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s ease;
-  }
-
-  .offering-card:hover .offering-number {
-    transform: rotate(-5deg) scale(1.1);
-  }
 
   h3 {
     font-size: 1.6rem;
@@ -110,6 +113,16 @@
     font-size: 1.05rem;
     line-height: 1.7;
     color: #4a4a4a;
+  }
+
+  .resort-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
   
   @media (max-width: 768px) {

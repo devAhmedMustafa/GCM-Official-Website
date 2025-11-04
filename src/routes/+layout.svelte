@@ -6,7 +6,7 @@
   let { children } = $props();
 </script>
 
-<Navbar />
+<!-- <Navbar /> -->
 
 <main>
   {@render children()}

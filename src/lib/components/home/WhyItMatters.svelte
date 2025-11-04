@@ -2,6 +2,7 @@
   import "aos/dist/aos.css";
   import AOS from "aos";
   import { onMount } from "svelte";
+  import Icon from "@iconify/svelte";
 
   // Initialize AOS when component mounts
   onMount(() => {
@@ -20,19 +21,19 @@
     
     <div class="stats-container">
       <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="icon">💰</div>
+        <Icon icon="solar:money-bag-bold-duotone" class="icon" width="48" height="48" style="color: var(--primary-color); margin: auto; margin-bottom: 1rem; " />
         <div class="value">$4B+</div>
         <div class="description">UAE longevity market by 2030</div>
       </div>
       
       <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="icon">🧬</div>
+        <Icon icon="solar:dna-bold-duotone" class="icon" width="48" height="48" style="color: var(--primary-color); margin: auto; margin-bottom: 1rem; " />
         <div class="value">60%</div>
         <div class="description">expected margins from personalized preventive care</div>
       </div>
       
       <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
-        <div class="icon">🏖️</div>
+        <Icon icon="fluent:beach-16-filled" class="icon" width="48" height="48" style="color: var(--primary-color); margin: auto; margin-bottom: 1rem;" />
         <div class="value">3.5M+</div>
         <div class="description">annual visitors projected to RAK by 2030</div>
       </div>
@@ -90,12 +91,6 @@
 
   .stat-card:hover {
     transform: translateY(-8px) rotateX(5deg);
-  }
-  
-  .icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: floatIcon 3s ease-in-out infinite;
   }
   
   @keyframes floatIcon {
